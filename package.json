@@ -15,7 +15,6 @@
   "devDependencies": {
     "chai": "^3.4.0",
     "mocha": "^2.3.3",
-    "n": "^2.0.2",
     "nave": "^0.5.3"
   },
   "dependencies": {},
