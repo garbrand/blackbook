@@ -11,5 +11,13 @@
   "devDependencies": {
     "chai": "^3.4.0",
     "mocha": "^2.3.3"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/garbrand/blackbook.git"
+  },
+  "bugs": {
+    "url": "https://github.com/garbrand/blackbook/issues"
   }
 }
