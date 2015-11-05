@@ -11,6 +11,8 @@ const Boaz = Factory ( Client );
 Boaz.firstname = "Boaz";
 Boaz.lastname = "van der Molen";
 
+console.log( Boaz.fullname() );
+
 const Boris = Factory ( Client );
 Boris.firstname = "Boris";
 Boris.lastname = "van der Molen";

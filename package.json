@@ -1,16 +1,22 @@
 {
   "name": "blackbook",
+  "engine": "5.0.0",
   "version": "1.0.0",
   "description": "Bookkeeping system",
   "main": "blackbook.js",
   "scripts": {
-    "test": "mocha **/*.tdd.js"
+    "tdd": "mocha **/*.tdd.js",
+    "bdd": "mocha **/*bdd.js",
+    "test": "npm run tdd && npm run bdd",
+    "start": "NAVE_DIR=./.nave nave use 5.0.0 node models/entities.js"
   },
-  "author": "",
+  "author": "Garbrand van der Molen <garbrand@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "chai": "^3.4.0",
-    "mocha": "^2.3.3"
+    "mocha": "^2.3.3",
+    "n": "^2.0.2",
+    "nave": "^0.5.3"
   },
   "dependencies": {},
   "repository": {

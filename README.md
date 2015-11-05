@@ -1,0 +1,3 @@
+# Blackbook
+
+Simple bookkeeping project.

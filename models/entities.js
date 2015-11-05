@@ -4,7 +4,10 @@ const Person = {
     lastname: String
 }
 
-Person.fullname = () => `${firstname} ${lastname}`;
+Person.fullname = () => {
+    console.log( "This", this );
+    return `${this.firstname} ${this.lastname}`;
+}
 
 const Address = {
     street: String,
@@ -21,7 +24,10 @@ const Caretaker = Object.assign ( { clients: [] },    Person, Address );
 
 
 /* Model Factory and Collection */
-const Factory = ( type ) => { return Object.assign( {}, type ) };
+const Factory = ( type ) => {
+    const model = Object.assign( type, type );
+    return Function.prototype.bind.call( model );
+};
 
 const Collection = ( type ) => {
     const TYPE = type;
@@ -34,3 +40,6 @@ const Collection = ( type ) => {
 }
 
 module.exports = { Person, Address, Client, Caretaker, Factory, Collection };
+
+
+console.log( 'W00t', process.versions.node );
