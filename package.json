@@ -8,7 +8,7 @@
     "tdd": "mocha **/*.tdd.js",
     "bdd": "mocha **/*bdd.js",
     "test": "npm run tdd && npm run bdd",
-    "start": "NAVE_DIR=./.nave nave use 5.0.0 node models/entities.js"
+    "start": "NAVE_DIR=./.nave nave use $(cat package.json | grep engine | grep -oe \"[0-9]\\+.[0-9]\\+.[0-9]\\+\" || echo \"\") node models/entities.js"
   },
   "author": "Garbrand van der Molen <garbrand@gmail.com>",
   "license": "ISC",
