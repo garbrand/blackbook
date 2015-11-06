@@ -9,13 +9,13 @@ const Collection = $.Collection;
 // Clients:
 const Boaz = Factory ( Client );
 Boaz.firstname = "Boaz";
-Boaz.lastname = "van der Molen";
+Boaz.lastname  = "van der Molen";
 
 console.log( Boaz.fullname() );
 
 const Boris = Factory ( Client );
 Boris.firstname = "Boris";
-Boris.lastname = "van der Molen";
+Boris.lastname  = "van der Molen";
 
 // Clients Collection:
 const Clients = Collection ( Client );
@@ -25,7 +25,7 @@ Boris.id = Clients( Boris );
 // Caretaker:
 const Gar = Factory ( Caretaker );
 Gar.firstname = "Garbrand";
-Gar.lastname = "van der Molen";
+Gar.lastname  = "van der Molen";
 Gar.id = 1;
 
 // Relationships:
