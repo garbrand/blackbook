@@ -1,14 +1,4 @@
-/* Primitive Types */
-const Person = {
-    firstname: String,
-    lastname:  String
-}
-
-// Delegate methods (to be stored on the prototype)
-Person.fullname = () => {
-    console.log( "This", this );
-    return `${this.firstname} ${this.lastname}`;
-};
+const Person = require('./person.js');
 
 const Address = {
     street:    String,
