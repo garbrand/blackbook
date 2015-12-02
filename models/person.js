@@ -1,13 +1,15 @@
 /* Primitive Types */
-const Person = () => {
-    let state = this;
+const Person = {
+    firstname: String,
+    lastname:  String
+};
 
-    state.firstname: String,
-    state.lastname:  String
+Person.fullname = function() {
+    return this.firstname+" "+this.lastname;
+};
+
+Person.whoami = function() {
+    console.log( this.fullname() );
 }
 
-// Delegate methods (to be stored on the prototype)
-Person.fullname = () => {
-    console.log( "This", this );
-    return `${this.firstname} ${this.lastname}`;
-};
+module.exports = Person;
